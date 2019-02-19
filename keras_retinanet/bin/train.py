@@ -486,7 +486,7 @@ def main(args=None):
         prediction_model = retinanet_bbox(model=model, anchor_params=anchor_params)
     else:
         weights = args.weights
-        # default to imagenet if nothing else is specified
+        # default to imagenet if nothing else is specified 默认是ImageNet否则为指定的
         if weights is None and args.imagenet_weights:
             weights = backbone.download_imagenet()
 
